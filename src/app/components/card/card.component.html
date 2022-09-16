@@ -1,0 +1,14 @@
+<mat-card>
+  <img mat-card-image src="{{character.image}}" alt="{{character.name}}">
+  <mat-card-title>
+    {{character.name}}
+  </mat-card-title>
+  <mat-card-footer>
+    <a [routerLink]="['/perfil', character.id]" fxFlex mat-flat-button color="primary">
+      Details
+    </a>
+  </mat-card-footer>
+</mat-card>
+
+
+

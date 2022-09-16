@@ -1,0 +1,24 @@
+<div class="row justify-content-center mt-4" style="max-width: 100%;">
+  <div class="col-sm-4 pl-5 pr-5 pb-4 item">
+      <mat-card class="pb-0">
+          <img matCardImage src="{{info.image}}">
+      </mat-card>
+  </div>
+  <div class="col-sm-7 item">
+    <mat-card>
+      <h4 class="text-center">Datos de personaje</h4>
+      <div class="row">
+        <h6>Datos basicos</h6>
+        <p>Nombre: <span>{{info.name}}</span></p>
+        <p>Especie: <span>{{info.species}}</span></p>
+        <p>Genero: <span>{{info.gender}}</span></p>
+      </div>
+      <hr style="border: 1px solid #3f51b5;">
+      <div class="row">
+        <h6>Datos origen</h6>
+        <p>Ciudad: <span>{{info.location | json | slice:13:29}}</span></p>
+        <p>Creado: <span>{{info.created}}</span></p>
+      </div>
+    </mat-card>
+  </div>
+</div>

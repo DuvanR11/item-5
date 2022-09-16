@@ -1,0 +1,15 @@
+
+mat-card{
+  width: 300px;
+  margin: 7px;
+
+  img.mat-card-image {
+    min-height: 300px;
+    max-height: 300px;
+  }
+
+  mat-card-title{
+    height: 55px;
+    font-size: x-large;
+  }
+}
