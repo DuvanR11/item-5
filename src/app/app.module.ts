@@ -1,3 +1,4 @@
+import { InterceptorService } from './services/interceptor.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,11 +15,20 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { DetalleComponent } from './components/detalle/detalle.component';
+import { CardMarvelComponent } from './components/card-marvel/card-marvel.component';
+import { ComicsMarvelComponent } from './pages/comics-marvel/comics-marvel.component';
+import { PerfilMarvelComponent } from './pages/perfil-marvel/perfil-marvel.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { ContentMarvelComponent } from './components/content-marvel/content-marvel.component';
+import { DetalleMarvelComponent } from './components/detalle-marvel/detalle-marvel.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -32,7 +42,14 @@ import { DetalleComponent } from './components/detalle/detalle.component';
     ContentCardComponent,
     HeaderComponent,
     PerfilComponent,
-    DetalleComponent
+    DetalleComponent,
+    CardMarvelComponent,
+    ComicsMarvelComponent,
+    PerfilMarvelComponent,
+    NotFoundComponent,
+    InicioComponent,
+    ContentMarvelComponent,
+    DetalleMarvelComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,10 +61,14 @@ import { DetalleComponent } from './components/detalle/detalle.component';
     FlexLayoutModule,
     HttpClientModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    NgxSpinnerModule,
+    MatProgressSpinnerModule
 
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

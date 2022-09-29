@@ -1,10 +1,27 @@
-export interface IDatos {
-  id: number | string;
-  name: String | null;
-  status: String;
-  species: String;
-  gender: String;
-  image: String;
-  created: String;
-  location: String;
-}
+  export interface Origin {
+      name: string;
+      url: string;
+  }
+
+  export interface Location {
+      name: string;
+      url: string;
+  }
+
+  export interface IDatos {
+      id: number;
+      name: string;
+      status: string;
+      species: string;
+      type: string;
+      gender: string;
+      origin: Origin;
+      location: Location;
+      image: string;
+      episode: string[];
+      url: string;
+      created: Date;
+  }
+
+
+

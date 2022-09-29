@@ -1,0 +1,28 @@
+<div class="row justify-content-center mt-4" style="max-width: 100%;">
+  <div class="col-sm-4 pl-5 pr-5 pb-4 item">
+      <mat-card class="pb-0">
+          <img matCardImage src="{{info.thumbnail.path}}.{{info.thumbnail.extension}} ">
+      </mat-card>
+  </div>
+  <div class="col-sm-7 item">
+    <mat-card>
+      <h4 class="text-center">Datos de personaje</h4>
+      <div class="row">
+        <h6>Datos basicos</h6>
+        <p>Nombre: <span>{{info.name}}</span></p>
+        <h6>Descripción</h6>
+        <p>{{info.description }}</p>
+      </div>
+      <hr style="border: 1px solid #3f51b5;">
+      <div class="row">
+        <h6>Datos </h6>
+        <p>Creado: <span>{{info.modified}}</span></p>
+      </div>
+      <mat-card-footer>
+        <a href="{{info.urls[0].url}}" fxFlex mat-flat-button color="primary">
+          Mas información
+        </a>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>

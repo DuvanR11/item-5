@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { IDatos } from 'src/app/interfaces/datos.interface';
 
 @Component({
   selector: 'app-card',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input() character: any;
+  @Input() character!: IDatos;
   constructor() { }
 
   ngOnInit(): void {

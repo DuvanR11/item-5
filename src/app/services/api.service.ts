@@ -15,7 +15,8 @@ export class ApiService {
 
   getAllCharacters(): Observable<IDatos> {
     console.log("categorias: " + this.http.get(this.URL_API))
-    return this.http.get<IDatos>(this.URL_API).pipe(map((data: any) => data.results))
+    return this.http.get<IDatos>(this.URL_API)
+    .pipe(map((data: any) => data.results))
   }
 
   getCharacter(id: number): Observable<any>{
