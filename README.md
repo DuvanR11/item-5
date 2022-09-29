@@ -1,3 +1,6 @@
+# item5 (Api Marvel)
+Para esta aplicacón agregue sistema de enrutado y en la reunion anterior le comente que habia tenido incovenientes con la api de marvel sin embargo pude solucione el error pero ya tenia montada otra api entonces hice una aplicación consumiendo las 2 apis, la aplicacón tiene pagina de error 404 al ingresar mal una url entre otras cosas.
+
 # ApiMarvel
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
